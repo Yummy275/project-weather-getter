@@ -1,1 +1,1 @@
-console.log("indeed");
+(()=>{"use strict";document.querySelector("button").onclick=async function(){const t=document.querySelector("#city-input").value,e=await async function(t){const e="https://api.openweathermap.org/data/2.5/weather?q="+t+"&appid=2587cd761c971a43631549e5e96f55cd&units=metric",n=await fetch(e),a=await n.json();return[a.main.temp,a.main.feels_like,a.main.humidity]}(t);console.log(e)}})();

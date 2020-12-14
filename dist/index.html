@@ -2,12 +2,34 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href='index.css'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
 </head>
 <body>
+    <div class='container'>
+        <h1 class='float-right text-white'>Weather App</h1>
+        <div class='container d-flex input-area justify-content-center'>
+            <input id='city-input' placeHolder="city" class='form-control'>
+            <button class='btn btn-dark'>Search</button>
+        </div>
+        <div class='d-flex container city-info-displayer justify-content-center text-white'>
+            <div class='system'>
+                <input type="radio" id="far" name="gender" value="F" checked>
+                <label for="far">F</label><br>
+                <input type="radio" id="female" name="gender" value="C">
+                <label for="female">C</label><br>
+            </div>
+            <h2 class="degrees">32°</h2>
+            <div class="secondary_info">
+                <p>Feels like: 29°</p>
+                <p>Humidity: 30%</p>
+            </div>
+        </div>
+    </div>
     <script type=''></script>
 </body>
 <script type="text/javascript" src="main.js"></script>
