@@ -8,26 +8,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
+    <script type="text/javascript">
+        //functions for radio that switch displayed degree system
+        function changeToMetric(){
+            document.getElementById('metric-sec').classList.remove('gone');
+            document.getElementById('imperial-sec').classList.add('gone');
+        }
+        function changeToImperial(){
+            document.getElementById('metric-sec').classList.add('gone');
+            document.getElementById('imperial-sec').classList.remove('gone');
+        }
+
+    </script>
 </head>
-<body>
+<body class='boody'>
     <div class='container'>
-        <h1 class='float-right text-white'>Weather App</h1>
+        <h1 class='black-outline float-right text-white'>Weather App</h1>
         <div class='container d-flex input-area justify-content-center'>
             <input id='city-input' placeHolder="city" class='form-control'>
             <button class='btn btn-dark'>Search</button>
         </div>
-        <div class='d-flex container city-info-displayer justify-content-center text-white'>
+        <div class='black-outline city-name text-white text-center'>
+            Tempe
+        </div>
+        <div class='d-flex container city-info-displayer justify-content-center text-white font-weight-bold'>
             <div class='system'>
-                <input type="radio" id="far" name="gender" value="F" checked>
+                <input onchange="changeToImperial()" type="radio" id="far" name="type" value="F" checked>
                 <label for="far">F</label><br>
-                <input type="radio" id="female" name="gender" value="C">
-                <label for="female">C</label><br>
+                <input onchange="changeToMetric()" type="radio" id="met" name="type" value="C">
+                <label for="met">C</label><br>
             </div>
-            <h2 class="degrees">32°</h2>
-            <div class="secondary_info">
-                <p>Feels like: 29°</p>
-                <p>Humidity: 30%</p>
-            </div>
+            <section id='imperial-sec' class='imperial-sec d-flex'>
+                <h2 class="degrees-imp"></h2>
+                <div class="secondary-info">
+                    <p class='feels-imp'>Feels like: </p>
+                    <p class='humid-imp'>Humidity: </p>
+                </div>
+            </section>
+            <section  id='metric-sec' class='metric-sec d-flex gone'>
+                <h2 class="degrees-metric"></h2>
+                <div class="secondary-info">
+                    <p class='feels-metric'>Feels like: </p>
+                    <p class='humid-metric'>Humidity: </p>
+                </div>
+            </section>
         </div>
     </div>
     <script type=''></script>
